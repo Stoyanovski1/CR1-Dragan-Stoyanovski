@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 7px black;
+    font-size: 4rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.img img {
+    box-shadow: 3px 3px 40px black;
+    width: 400px;
+    height: 400px;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    margin-top: 40px;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.preis {
+    padding: 30px;
+    text-align: center;
+}
+
+.preis ul {
+    list-style-type: none;
+}
+
+.preis ul li {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+input {
+    font-size: 1rem;
+}
