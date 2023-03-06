@@ -9,80 +9,241 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d49dc53bf9.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Food Blog</title>
 </head>
 
 <body>
+
+
     <div class="n">
         <p class="f">Food Blog</p>
         <p class="r">Recipes <i class="fa-sharp fa-solid fa-magnifying-glass"></i></p>
     </div>
     <nav class="navbar">
         <ul>
-            <li><a href="http://127.0.0.1:5501/Menu/Hamburger.html">Burger</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Salad.html">Salat</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Brakfast.html">Breakfat</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Ice.html">Ice</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Pommes.html">Pommes</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Water.html">Drink</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Dessert.html">Dessert</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Veggie.html">Veggie</a></li>
-            <li><a href="http://127.0.0.1:5501/Menu/Chicken.html">Chicken & Fisch</a></li>
+            <li><a href="Menu/Hamburger.html">Burger</a></li>
+            <li><a href="Menu/Salad.html">Salat</a></li>
+            <li><a href="Menu/Brakfast.html">Breakfat</a></li>
+            <li><a href="Menu/Ice.html">Ice</a></li>
+            <li><a href="Menu/Pommes.html">Pommes</a></li>
+            <li><a href="Menu/Water.html">Drink</a></li>
+            <li><a href="Menu/Dessert.html">Dessert</a></li>
+            <li><a href="Menu/Veggie.html">Veggie</a></li>
+            <li><a href="Menu/Chicken.html">Chicken & Fisch</a></li>
         </ul>
     </nav>
+    <!-- particles.js container -->
+    <!-- <div id="particles-js" style="z-index: -1;"></div> -->
+    <!-- stats - count particles -->
+    <!-- <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> -->
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <!-- stats.js lib -->
+    <!-- <script src="http://threejs.org/examples/js/libs/stats.min.js"></script> -->
+    <!-- svg making up the clock -->
+    <!-- <svg viewBox="0 0 100 100" width="100" height="100" style="margin: 0 auto;" class="animate__animated animate__bounce"> -->
+    <!-- <defs> -->
+    <!-- filters describing the shadows, applied on the larger and smaller shapes -->
+    <!-- <filter id="shadow-large">
+                <feDropShadow dx="0" dy="0" stdDeviation="4"/>
+            </filter>
+            <filter id="shadow-small">
+                    <feDropShadow dx="0" dy="0" stdDeviation="0.2"/>
+            </filter> -->
+
+    <!-- mask used to cut out a sliver of the overlaid circle -->
+    <!-- <mask
+                id="mask">
+                <g transform="translate(50 50)"> -->
+    <!-- starting at -15, incrementing by 30 for each hour -->
+    <!-- <g
+                        class="hours" transform="rotate(-15)">
+                        <circle
+                            cx="0"
+                            cy="0"
+                            r="50"
+                            fill="#fff">
+                        </circle>
+                        <path
+                            d="M 0 -50 v 50 l 28.86 -50"
+                            fill="#000">
+                        </path>
+                    </g>
+                </g>
+            </mask>
+        </defs> -->
+
+    <!-- circle making up the bottom of the clock -->
+    <!-- <circle
+            cx="50"
+            cy="50"
+            r="46"
+            fill="#303335">
+        </circle> -->
+
+    <!-- circle with the accent color, overlaid before the text elements -->
+    <!-- <circle
+            cx="50"
+            cy="50"
+            r="42"
+            fill="#EA3F3F"
+            filter="url(#shadow-large)">
+        </circle> -->
+
+    <!-- text elements, positioned from the center around the clock -->
+    <!-- <g
+            class="clock--face"
+            font-size="8px"
+            transform="translate(50 50)"
+            text-anchor="middle"
+            dominant-baseline="middle"> -->
+    <!-- the elements are included through the script, at intervals of 30 degrees -->
+    <!--
+            <text
+                transform="rotate(-90) translate(35 0) rotate(90)" >
+                12
+            </text>
+    
+            <text
+                transform="rotate(-0) translate(35 0) rotate(0)" >
+                03
+            </text>
+            -->
+    <!-- </g> -->
+
+    <!-- circle overlaid on the accent circle and text elements -->
+    <!-- <circle
+            mask="url(#mask)"
+            cx="50"
+            cy="50"
+            r="50"
+            fill="#303335">
+        </circle> -->
+
+    <!-- smaller circle on which the hands sit -->
+    <!-- <circle
+            cx="50"
+            cy="50"
+            r="4"
+            filter="url(#shadow-small)"
+            fill="#303335">
+        </circle> -->
+
+    <!-- clock's hands -->
+    <!-- centered in the clock and rotated according to the passage of time in the 0-360 range -->
+    <!-- <g
+            class="hands"
+            transform="translate(50 50)"
+            >
+            <g
+                class="minutes" -->
+    <!--transform="rotate(240)"  change rotation of this group to affect both clock's hand -->
+    <!-- <path
+                    fill="#fff"
+                    d="M -0.4 8 h 0.8 v -33 h -0.8 z">
+                </path>
+                <circle
+                    fill="#303335"
+                    cx="0"
+                    cy="0"
+                    r="0.6">
+                </circle>
+            </g>
+    
+            <g
+                class="seconds" -->
+    <!-- transform="rotate(80)">  change rotation of this group to affect both clock's hand -->
+    <!-- <path
+                    fill="#EA3F3F"
+                    d="M -0.4 10 h 0.8 v -45 h -0.8 z">
+                </path>
+                <circle
+                    stroke-width="0.4"
+                    stroke="#EA3F3F"
+                    fill="#303335"
+                    cx="0"
+                    cy="0"
+                    r="0.8">
+                </circle>
+            </g>
+        </g>
+    </svg> -->
+
+    <!-- div wrapping the controls to change the number of hours/minutes/seconds -->
+    <!-- <div class="controls animate__animated animate__bounceInLeft" style="margin: 0 auto;">
+        <div class="controls__control" data-control="hours">
+            <button>+</button>
+            <span class="control--hours">h</span>
+            <button>-</button>
+        </div>
+
+        <div class="controls__control" data-control="minutes">
+            <button>+</button>
+            <span class="control--minutes">m</span>
+            <button>-</button>
+        </div>
+
+        <div class="controls__control" data-control="seconds">
+            <button>+</button>
+            <span class="control--seconds">s</span>
+            <button>-</button>
+        </div>
+    </div> -->
     <div class="container">
-        <div class="">
-            <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Hamburger.html"><img class="img1" src="ham2.png" alt="Burger"></a>
+        <!-- animate__animated animate__bounceInLeft animate__delay-3s -->
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
+            <div class="banner">
+                <a href="./Menu/Hamburger.html"><img class="img1" src="ham2.png" alt="Burger"></a>
                 <h2 class="h1">Burger &<br> -Hamburger</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Salad.html"><img class="img1" src="sal.png" alt="sal"></a>
+                <a href="./Menu/Salad.html"><img class="img1" src="sal.png" alt="sal"></a>
                 <h2 class="h1">Salad &<br>-Mix Salad</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Brakfast.html"><img class="img1" src="toast.png" alt="toa"></a>
+                <a href="./Menu/Brakfast.html"><img class="img1" src="toast.png" alt="toa"></a>
                 <h2 class="h1">Breakfast &<br> -Toast</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Ice.html"><img class="img1" src="eis.png" alt="eis"></a>
+                <a href="./Menu/Ice.html"><img class="img1" src="eis.png" alt="eis"></a>
                 <h2 class="h1">Ice & <br>-Ice Cream</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Pommes.html"><img class="img1" src="fries.png" alt="fri"></a>
+                <a href="./Menu/Pommes.html"><img class="img1" src="fries.png" alt="fri"></a>
                 <h2 class="h1">Pommes & <br> -Frites</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Water.html"><img class="img1" src="water.png" alt="wat"></a>
+                <a href="./Menu/Water.html"><img class="img1" src="water.png" alt="wat"></a>
                 <h2 class="h1">Drink & <br> -Watter</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Dessert.html"><img class="img1" src="cake.png" alt="cak"></a>
+                <a href="./Menu/Dessert.html"><img class="img1" src="cake.png" alt="cak"></a>
                 <h2 class="h1">Cake & <br> -Dessert</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Veggie.html"><img class="img1" src="vegie.png" alt="veg"></a>
+                <a href="./Menu/Veggie.html"><img class="img1" src="vegie.png" alt="veg"></a>
                 <h2 class="h1">Fruit Salad & <br> -Veggie</h2>
             </div>
         </div>
-        <div>
+        <div class="animate__animated animate__bounceInLeft animate__delay-1s	1s">
             <div class="banner ">
-                <a href="http://127.0.0.1:5501/Menu/Chicken.html"><img class="img1" src="chicken.png" alt="chk"></a>
+                <a href="./Menu/Chicken.html"><img class="img1" src="chicken.png" alt="chk"></a>
                 <h2 class="h1">Chicken & Fish <br> -Chicken Nuggets</h2>
             </div>
         </div>
@@ -105,6 +266,7 @@
             <p>Copyright &#169; 2023 Dragan Stoyanovski</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
